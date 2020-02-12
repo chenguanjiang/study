@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"retriever/both"
 	"retriever/mock"
 	"retriever/real"
 	"time"
@@ -15,9 +16,14 @@ type Poster interface {
 	Post(url string) string
 }
 
+type LoveI interface {
+	Love(string) string
+}
+
 type RetrieverPoster interface {
 	Retriever
 	Poster
+	Love(url string) string
 }
 
 func download(r Retriever, url string) string {
@@ -28,8 +34,16 @@ func post(p Poster, url string) string {
 	return p.Post(url)
 }
 
-func download_post(dp RetrieverPoster, url string) {
-	dp.Post(url)
+func download_post(dp RetrieverPoster, url string) string {
+	return dp.Post(url)
+}
+
+func get_love(rpl RetrieverPoster, url string) string {
+	return rpl.Love(url)
+}
+
+func get_hello_love(l LoveI, url string) string {
+	return l.Love(url)
 }
 
 func inspect(r Retriever) {
@@ -62,4 +76,12 @@ func main() {
 	}
 	fmt.Println("===========================")
 	fmt.Println("#########################################")
+	var rp RetrieverPoster
+	rp = &both.BothData{"hello", "world", "gjchen"}
+	fmt.Println(download(rp, "!"))
+	fmt.Println(post(rp, "!"))
+	fmt.Println(download_post(rp, "!"))
+	var l LoveI
+	l = &both.Love{}
+	fmt.Println(get_hello_love(l, ""))
 }

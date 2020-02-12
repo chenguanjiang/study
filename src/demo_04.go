@@ -212,5 +212,14 @@ func main() {
 	//str := "abcabcbb我爱中国呀哈哈哈哈哈！"
 	//maxLength := GetNoRepeatStringMaxLength(str)
 	//fmt.Println(maxLength)
-	fmt.Println(c9(3))
+	//fmt.Println(c9(3))
+	//sl:=[]string{}
+	//sl=append(sl,"abc")
+	//fmt.Println(sl)
+	type MyStruct struct {
+		Content []interface{}
+	}
+	sl := []string{}
+	m := MyStruct{Content: sl}
+	fmt.Println(m)
 }
