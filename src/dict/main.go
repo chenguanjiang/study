@@ -27,4 +27,6 @@ func main() {
 	fmt.Println(get(r, 0))
 	fmt.Println(get(r, 1))
 	fmt.Println(get(r, 2))
+	fmt.Println("-------------------------------------")
+	fmt.Println(r)
 }
