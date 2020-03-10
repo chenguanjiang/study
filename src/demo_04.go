@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"reflect"
 	"unicode/utf8"
 )
@@ -216,10 +217,11 @@ func main() {
 	//sl:=[]string{}
 	//sl=append(sl,"abc")
 	//fmt.Println(sl)
-	type MyStruct struct {
-		Content []interface{}
-	}
-	sl := []string{}
-	m := MyStruct{Content: sl}
-	fmt.Println(m)
+	//type MyStruct struct {
+	//	//	Content []interface{}
+	//	//}
+	//	//sl := []string{}
+	//	//m := MyStruct{Content: sl}
+	//	//fmt.Println(m)
+	fmt.Println(os.Args[0])
 }

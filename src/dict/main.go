@@ -1,23 +1,23 @@
 package main
 
 import (
-	"dict/myinterface"
+	. "dict/myinterface"
 	"dict/mystruct"
 	"fmt"
 )
 
-func put(w myinterface.WriterTool, i interface{}) {
+func put(w WriterTool, i interface{}) {
 	w.Write(i)
 }
 
-func get(r myinterface.ReaderTool, index int) interface{} {
+func get(r ReaderTool, index int) interface{} {
 	return r.Read(index)
 }
 
 func main() {
 	ms := &mystruct.MyStruct{[]interface{}{}}
-	var w myinterface.WriterTool
-	var r myinterface.ReaderTool
+	var w WriterTool
+	var r ReaderTool
 	w = ms
 	r = ms
 	put(w, "abc")
