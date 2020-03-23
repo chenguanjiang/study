@@ -42,18 +42,18 @@ func gjchen_01(a, b int) (new_a, new_b int) {
 	return a, b
 }
 
-func gjchen_02(l []int) []int {
-	for index, _ := range l {
-		for ind, _ := range l {
-			if ind < len(l)-1 {
-				if l[ind] > l[ind+1] {
-					l[ind], l[ind+1] = l[ind+1], l[ind]
-				}
-			}
-		}
-	}
-	return l
-}
+//func gjchen_02(l []int) []int {
+//	for index, _ := range l {
+//		for ind, _ := range l {
+//			if ind < len(l)-1 {
+//				if l[ind] > l[ind+1] {
+//					l[ind], l[ind+1] = l[ind+1], l[ind]
+//				}
+//			}
+//		}
+//	}
+//	return l
+//}
 
 func main() {
 	//say_hello01(0)
