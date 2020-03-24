@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 type Person struct {
 	name string
@@ -60,4 +63,5 @@ func main() {
 	//m:=&My01{"gjchen",20}
 	//fmt.Println(m)
 	//fmt.Println(gjchen_01(1,2))
+	fmt.Println("##########:", time.Second)
 }
